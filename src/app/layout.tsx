@@ -4,6 +4,7 @@ import "./globals.css";
 import { ReactQueryProvider } from "@/provider/react-query";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ReactQueryProvider>
           <Header />
-          {children}
+          <Suspense>{children}</Suspense>
           <Footer />
         </ReactQueryProvider>
       </body>
