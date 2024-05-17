@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { formatNumberWithDots } from "@/utils";
+import { priceFormatter } from "@/utils";
 import { useBalanceStore } from "@/store/balance";
 import { Button } from "../ui/button";
 import { Drawer } from "../drawer";
@@ -218,7 +218,7 @@ function Header() {
               <div className="flex cursor-default select-none gap-1 bg-zinc-800 px-2 py-1 text-amber-100">
                 {/* <p>$ &nbsp;</p> */}
                 <PiMoneyWavyLight className="size-6 text-green-500" />
-                <p>Rp {formatNumberWithDots(userBalance)}</p>
+                <p>Rp {priceFormatter(userBalance, true)}</p>
               </div>
               <div className="flex cursor-pointer items-center rounded-sm bg-amber-400 px-2 py-1 hover:bg-amber-300">
                 <h1 className="font-medium">User Guest &nbsp;</h1>
