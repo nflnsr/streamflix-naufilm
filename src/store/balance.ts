@@ -6,7 +6,7 @@ type BalanceStore = {
 };
 
 export const useBalanceStore = create<BalanceStore>((set) => ({
-  balance: 100000,
+  balance: 25000,
   setBalance: (balance: number) => {
     set({ balance: balance });
   },
